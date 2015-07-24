@@ -11,7 +11,7 @@ from .models import Card
 
 class IndexView(generic.ListView):
     template_name = 'cards/index.html'
-    context_object_name = 'latest_question_list'
+    context_object_name = 'latest_cards_list'
 
     def get_queryset(self):
         """Return the last five published questions."""
@@ -23,8 +23,5 @@ class DetailView(generic.DetailView):
     template_name = 'cards/detail.html'
 
 
-class ResultsView(generic.DetailView):
-    model = Card
-    template_name = 'cards/results.html'
     
 
